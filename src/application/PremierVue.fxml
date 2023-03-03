@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PremierController">
+   <bottom>
+      <Button fx:id="relancer" mnemonicParsing="false" onAction="#clicRelancer" text="Relancer" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+         </padding></Button>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="carte1" mnemonicParsing="false" onAction="#clicCarte" text="Carte">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="carte2" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="1" />
+            <Button fx:id="carte3" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="2" />
+            <Button fx:id="carte4" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="3" />
+            <Button fx:id="carte5" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.rowIndex="1" />
+            <Button fx:id="carte6" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="carte7" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="carte8" mnemonicParsing="false" onAction="#clicCarte" text="Carte" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <GridPane prefHeight="106.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="38.0" prefWidth="110.0" text="MÉMOIRE MÉMOIRE">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="50.0" top="50.0" />
+               </padding></Label>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Temps restant : " />
+                  <Label fx:id="timer" text="0 sec" GridPane.columnIndex="1" />
+                  <Label text="Score : " GridPane.columnIndex="2" />
+                  <Label fx:id="score" text="0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <Label fx:id="etatPartie" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="284.0" text="Partie en cours !" textAlignment="CENTER" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>
